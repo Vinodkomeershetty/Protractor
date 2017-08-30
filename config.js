@@ -1,13 +1,15 @@
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
-
     capabilities: {
         'browserName': 'chrome'
     },
 
-    specs: ['example-spec.js'],
+    framework: 'jasmine',
+    specs: ['./specs/SampleSpec.js'],
+    baseUrl: 'https://www.udemy.com/',
 
     jasmineNodeOpts: {
-        showColors: true
+        showColors: true,
+        defaultTimeoutInterval: 50000
     }
 };
